@@ -42,3 +42,26 @@ func longestPalindrome(_ s: String) -> String {
 }
 print(longestPalindrome(Input))     //dzzazzd    aba
 
+
+
+//# Use above logic with added below
+//Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+//
+//Note: For the purpose of this problem, we define empty string as valid palindrome.
+//
+//Example 1:
+//
+//Input: "A man, a plan, a canal: Panama"
+//Output: true
+//Example 2:
+//
+//Input: "race a car"
+//Output: false
+extension String {
+    var alphanumeric: String {
+        return self.components(separatedBy: CharacterSet.alphanumerics.inverted).joined().lowercased()
+    }
+}
+
+print("alphanumeric :", "A man, a plan, a canal: Panama".alphanumeric)
+
