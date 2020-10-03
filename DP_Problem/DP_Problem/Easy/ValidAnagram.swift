@@ -33,7 +33,7 @@
     print("Is Anagram correct:", isAnagram(s, t))
     
 
-// Without higerorder function
+// Without higherOrder function 
     func isanagram(sStr: String, tStr:String) -> Bool {
         var dict = [String:Int]()
         for keyStr in sStr {
