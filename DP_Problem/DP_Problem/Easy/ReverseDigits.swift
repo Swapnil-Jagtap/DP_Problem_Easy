@@ -23,3 +23,17 @@ let uniqueUnordered = Array(Set(array))
 let uniqueOrdered = Array(NSOrderedSet(array: array))
 print(uniqueOrdered.count)
 print(uniqueOrdered)
+
+// Without HOF
+import UIKit
+var array = [0,0,1,1,1,2,2,3,3,4]
+func removeDuplicate(nums: [Int]) -> [Int] {
+    var resultArray = [Int]()
+    for i in 0..<nums.count {
+        if !resultArray.contains(nums[i]) {
+            resultArray.append(nums[i])
+        }
+    }
+    return resultArray
+}
+print(removeDuplicate(nums:array))
