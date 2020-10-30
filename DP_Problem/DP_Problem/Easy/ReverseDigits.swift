@@ -37,3 +37,18 @@ func removeDuplicate(nums: [Int]) -> [Int] {
     return resultArray
 }
 print(removeDuplicate(nums:array))
+
+//
+var array = [0,0,1,1,1,2,2,3,3,4]
+func removeDuplicate(nums: [Int]) -> [Int] {
+    var resultArray = [Int]()
+     var lastElement : Int?
+     for item in nums {
+       if item != lastElement {
+         resultArray.append(item)
+       }
+       lastElement = item
+     }
+    return resultArray
+}
+print(removeDuplicate(nums:array))
