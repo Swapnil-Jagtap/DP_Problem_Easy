@@ -9,7 +9,7 @@
 //Note: You may assume the string contains only lowercase English letters.
 
 let input = "loveleetcode"
-func FirstUniqueCharacter(InputString:String) -> Int {
+func FirstUniqueCharacterIndex(InputString:String) -> Int {
     var hashMap = [String:Int]()
     let arrayChar = Array(InputString)
     for i in 0..<arrayChar.count {
@@ -24,3 +24,23 @@ func FirstUniqueCharacter(InputString:String) -> Int {
 }
 
 print(FirstUniqueCharacter(InputString: input))
+
+
+// With test cases
+let input:String? = "mornming"
+func findFirstNonrepatingChar(strVal:String?) -> String {
+    guard let str = strVal else {
+        return "Given string is nil"
+    }
+    var hashDict = [String:Int]()
+    for iteam in str {
+        hashDict[String(iteam)] = (hashDict[String(iteam)] ?? 0) + 1
+    }
+    for item in str {
+        if hashDict[String(item)] == 1 {
+            return String(item)
+        }
+    }
+    return "No unique cahr found in given string"
+}
+print(findFirstNonrepatingChar(strVal: input))
