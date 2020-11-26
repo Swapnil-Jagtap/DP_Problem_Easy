@@ -29,7 +29,7 @@ func findLarges(nums:[Int]) -> Int {
             MaxIndex = i
         }
     }
-    for j in 0..<nums.count-1 {
+    for j in 0..<nums.count {
         if (MaxIndex != j && nums[MaxIndex] < 2 * nums[j]) {
             return -1
         }
