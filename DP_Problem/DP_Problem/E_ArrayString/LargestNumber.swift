@@ -23,7 +23,7 @@
 let input = [3,6,1,0]
 func findLarges(nums:[Int]) -> Int {
     var largeNum=0, MaxIndex = -1
-    for i in 0..<nums.count-1 {
+    for i in 0..<nums.count {
         if nums[i] > largeNum {
             largeNum = nums[i]
             MaxIndex = i
